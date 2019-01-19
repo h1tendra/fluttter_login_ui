@@ -21,31 +21,90 @@ class LoginPage extends StatelessWidget {
                   child: topIconBar(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(bottom: 20.0),
+                  margin: EdgeInsets.only(bottom: 90.0),
                   child: LoginForm(),
                 ),
-                Transform.scale(
-                  alignment: Alignment.topCenter,
-                  scale: 2,
-                  child: FloatingActionButton(
-                    onPressed: () {},
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.black,
-                    child: Icon(
-                      IconData(
-                        0xe5c5,
-                        fontFamily: 'MaterialIcons',
-                      ),
-                      size: 34,
-                    ),
-                  ),
-                )
               ],
             ),
           ),
           Container(
-            child: Center(
-              child: Text('Section 2'),
+            color: Colors.white,
+            padding: EdgeInsets.only(bottom: 5),
+            child: Transform.scale(
+              alignment: Alignment(0, 1),
+              scale: 2,
+              child: FloatingActionButton(
+                onPressed: () {
+                  print('floating action pressed');
+                },
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.black,
+                elevation: 0,
+                highlightElevation: 0,
+                child: Container(
+                  margin: EdgeInsets.only(top: 10),
+                  child: Icon(
+                    IconData(
+                      0xe313,
+                      fontFamily: 'MaterialIcons',
+                    ),
+                    size: 48,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            color: Colors.white,
+            child: Column(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(top: 20),
+                  width: 300,
+                  child: FlatButton(
+                    onPressed: () {
+                      print('login with fb pressed.');
+                    },
+                    child: Image(
+                      image: AssetImage('images/loginwithfacebook.png'),
+                    ),
+                    padding: EdgeInsets.all(0),
+                  ),
+                ),
+                Container(
+                  width: 300,
+                  margin: EdgeInsets.only(top: 10),
+                  child: FlatButton(
+                    onPressed: () {
+                      print('login with google pressed.');
+                    },
+                    child:
+                        Image(image: AssetImage('images/loginwithgoogle.png')),
+                    padding: EdgeInsets.all(0),
+                  ),
+                ),
+                Container(
+                  width: 300,
+                  margin: EdgeInsets.only(top: 10),
+                  child: RaisedButton(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    onPressed: () {
+                      print('create account pressed');
+                    },
+                    child: Text(
+                      'Create an account',
+                      style: TextStyle(fontSize: 24),
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 30, bottom: 20),
+                  child: Text(
+                    'ABOUT | CONTACT',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ],
             ),
           ),
         ],

@@ -40,6 +40,8 @@ flutter:
   assets:
    - images/bg.jpg
    - images/bg2.jpg
+   - images/loginwithfacebook.png
+   - images/loginwithgoogle.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
