@@ -166,6 +166,7 @@ class _LoginFormState extends State<LoginForm> {
       key: Key(key),
       textAlign: TextAlign.center,
       obscureText: isPassword,
+      style: TextStyle(color: Colors.black),
       decoration: InputDecoration(
         hintText: hintText,
         border: OutlineInputBorder(
