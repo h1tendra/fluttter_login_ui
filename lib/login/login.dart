@@ -14,7 +14,7 @@ class LoginPage extends StatelessWidget {
                     children: <Widget>[
                       FlutterLogo(
                         size: 100.0,
-                        colors: Colors.deepPurple,
+                        colors: Colors.orange,
                       ),
                       Text(
                         'Meet',
@@ -57,10 +57,11 @@ class LoginPage extends StatelessWidget {
                         child: Row(
                           children: <Widget>[
                             Expanded(
-                              child: RaisedButton(
+                              child: OutlineButton(
                                 onPressed: () {},
                                 child: Text(
-                                  'LOG IN',
+                                  'GO !',
+                                  style: TextStyle(fontSize: 24),
                                 ),
                                 color: Colors.cyan,
                                 textColor: Colors.white,
@@ -88,10 +89,18 @@ class LoginPage extends StatelessWidget {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: RaisedButton(
-                    onPressed: () {},
-                    child: Text('LOGIN WITH FACEBOOK'),
-                    color: Colors.blue,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 5),
+                    height: 50,
+                    child: FlatButton(
+                      onPressed: () {
+                        print('login with fb pressed.');
+                      },
+                      child: Image(
+                        image: AssetImage('images/loginwithfacebook.png'),
+                      ),
+                      padding: EdgeInsets.all(0),
+                    ),
                   ),
                 ),
               ],
@@ -99,10 +108,17 @@ class LoginPage extends StatelessWidget {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: RaisedButton(
-                    onPressed: () {},
-                    child: Text('LOGIN WITH GOOGLE'),
-                    color: Colors.cyan,
+                  child: Container(
+                    height: 50,
+                    margin: EdgeInsets.only(top: 10),
+                    child: FlatButton(
+                      onPressed: () {
+                        print('login with google pressed.');
+                      },
+                      child: Image(
+                          image: AssetImage('images/loginwithgoogle.png')),
+                      padding: EdgeInsets.all(0),
+                    ),
                   ),
                 ),
               ],
