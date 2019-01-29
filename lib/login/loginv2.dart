@@ -29,7 +29,7 @@ class LoginPage extends StatelessWidget {
           ),
           Container(
             color: Colors.white,
-            padding: EdgeInsets.only(bottom: 5),
+            padding: EdgeInsets.only(bottom: 15),
             child: Transform.scale(
               alignment: Alignment(0, 1),
               scale: 2,
@@ -91,8 +91,6 @@ class LoginPage extends StatelessWidget {
       },
       backgroundColor: Colors.white,
       foregroundColor: Colors.black,
-      elevation: 0,
-      highlightElevation: 0,
       child: Container(
         margin: EdgeInsets.only(top: 10),
         child: Icon(
